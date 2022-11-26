@@ -1,16 +1,17 @@
-1 download  https://www.python.org/downloads/release/python-371/
-2 $ sudo tar -zxvf Python-3.7.1.tgz
-3 $ sudo apt-get install libffi-dev
-4 $ sudo mkdir -p /usr/local/python3
-5 $ make
-6 $ make install
-rm -rf /usr/bin/python3
+ download  https://www.python.org/downloads/release/python-371/
+ sudo tar -zxvf Python-3.7.1.tgz
+ sudo apt-get install libffi-dev
+ sudo mkdir -p /usr/local/python3
+ make
+ make install
 
-rm -rf /usr/bin/pip3 
+ rm -rf /usr/bin/python3
 
-ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
+ rm -rf /usr/bin/pip3 
+
+ ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
 
 #添加 pip3 的软链接
 
-ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
-$ python3.7 -V
+ ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
+ python3.7 -V
