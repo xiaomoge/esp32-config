@@ -1,0 +1,28 @@
+1 ,install prerequisities:
+sudo apt-get install git wget flex bison gperf python3 python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+
+2, install python
+
+3, idf
+mkdir -p ~/esp
+cd ~/esp
+git clone --recursive https://github.com/espressif/esp-idf.git
+
+4, setup tools
+cd ~/esp/esp-idf
+./install.sh all
+
+5, environment
+. $HOME/esp/esp-idf/export.sh
+
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+
+
+update idf
+
+cd $IDF_PATH
+git fetch
+git checkout release/v3.1
+git pull
+git submodule update --init --recursive
